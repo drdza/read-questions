@@ -106,4 +106,4 @@ st.write(f"La aplicación se actualizará automáticamente cada {refresh_interva
 
 # Simular recarga automática mediante query params
 time.sleep(refresh_interval)
-st.experimental_set_query_params()
+st.set_query_params()
