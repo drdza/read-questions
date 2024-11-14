@@ -89,8 +89,8 @@ else:
     st.write("Esta aplicación muestra las respuestas recopiladas en la encuesta, asociadas a cada pregunta.")
 
     # Seleccionar una fila específica para ver respuestas de un usuario individual
-    selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", df["Email"].unique())
-    user_data = df[df["Email"] == selected_user]
+    selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", df["Correo Electrónico"].unique())
+    user_data = df[df["Correo Electrónico"] == selected_user]
 
     # Mostrar preguntas y respuestas de ese usuario
     if not user_data.empty:
@@ -100,8 +100,10 @@ else:
     else:
         st.write("No se encontraron respuestas para el usuario seleccionado.")
 
-# Configurar actualización automática cada 10 segundos
+# Configurar actualización automática cada 10 segundos usando query params
 refresh_interval = 10  # Intervalo en segundos para la actualización automática
 st.write(f"La aplicación se actualizará automáticamente cada {refresh_interval} segundos para cargar nuevas respuestas.")
+
+# Simular recarga automática mediante query params
 time.sleep(refresh_interval)
-st.experimental_rerun()
+st.experimental_set_query_params()
