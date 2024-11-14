@@ -92,6 +92,7 @@ else:
     selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", df["Email"].unique())
     user_data = df[df["Email"] == selected_user]
     user_name =  df[df["Nombre"] == selected_user]
+    st.write(user_name)
 
     # Mostrar preguntas y respuestas de ese usuario
     if not user_data.empty:
