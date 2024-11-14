@@ -91,13 +91,11 @@ else:
     # Seleccionar una fila específica para ver respuestas de un usuario individual
     selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", df["Email"].unique())
     user_data = df[df["Email"] == selected_user]
-    
-    
 
     # Mostrar preguntas y respuestas de ese usuario
     if not user_data.empty:
         st.subheader(f"Respuestas de {selected_user}")
-        for column in user_data.columns[2:]:  # Saltar nombre y correo electrónico
+        for column in user_data.columns:  # Saltar nombre y correo electrónico
             st.write(f"**{column}:** {user_data.iloc[0][column]}")
     else:
         st.write("No se encontraron respuestas para el usuario seleccionado.")
