@@ -1,4 +1,4 @@
-import streamlit as st
+(import streamlit as st
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import json
@@ -89,7 +89,7 @@ else:
     st.write("Esta aplicación muestra las respuestas recopiladas en la encuesta, asociadas a cada pregunta.")
 
     # Seleccionar una fila específica para ver respuestas de un usuario individual
-    selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", df["Nombre"].unique())
+    selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", upper(df["Nombre"]).unique())
     user_data = df[df["Nombre"] == selected_user]
     user_data["Nombre"] = upper(user_data["Nombre"])
 
