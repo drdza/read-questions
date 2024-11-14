@@ -1,0 +1,67 @@
+{
+    "sections": [
+        {
+            "title": "Sobre las Interacciones con los Usuarios",
+            "questions": [
+                "1 - ¿Cuáles son las preguntas o solicitudes más frecuentes que reciben de los usuarios finales?",
+                "2 -  ¿Existen ciertos tipos de tickets o solicitudes que representan un porcentaje alto de las interacciones con los usuarios?",
+                "3 - ¿Cuánto tiempo toma, en promedio, responder a las consultas comunes?",
+                "4 - ¿En qué situaciones los usuarios suelen expresar más frustración o insatisfacción?",
+                "5 - ¿Qué datos o información requieren los usuarios con más frecuencia cuando consultan el estado de un ticket o solicitud?"
+            ]
+        },
+        {
+            "title": "Sobre los Procesos de Gestión de Tickets y Solicitudes",
+            "questions": [
+                "6 - ¿Cuáles son los pasos principales que siguen para atender una solicitud desde el momento en que se recibe hasta su cierre?",
+                "7 - ¿Existen puntos en el proceso donde el equipo siente que se podría automatizar alguna tarea repetitiva?",
+                "8 - ¿Cómo priorizan las solicitudes y tickets? ¿Qué criterios utilizan para definir urgencia?",
+                "9 - ¿Hay algún proceso actual de evaluación de la satisfacción del usuario al final de cada caso? De ser así, ¿cómo funciona?"
+            ]
+        },
+        {
+            "title": "Sobre la Escalación y Complejidad de los Casos",
+            "questions": [
+                "10 -  ¿En qué situaciones suelen escalar un caso a otros departamentos o a un agente?",
+                "11 - ¿Qué información deben recopilar antes de que se pueda tomar una decisión sobre escalar un caso?",
+                "12 - ¿Existen situaciones en las que el equipo de CAU podría resolver problemas básicos sin involucrar a los departamentos especializados?"
+            ]
+        },
+        {
+            "title": "Sobre la Comunicación con los Usuarios",
+            "questions": [
+                "13 - ¿Qué plataforma prefieren los usuarios para comunicarse con el CAU? ¿Por qué es efectiva o ineficiente?",
+                "14 - ¿Qué tan cómodos se sienten los usuarios interactuando a través de WhatsApp en lugar de otros medios?",
+                "15 - ¿Cómo responden actualmente a consultas que llegan fuera del horario de atención?"
+            ]
+        },
+        {
+            "title": "Sobre Casos y Situaciones No Cubiertos",
+            "questions": [
+                "16 - ¿Existen tipos de solicitudes que requieren mucho tiempo de investigación o recopilación de datos antes de que puedan ser resueltas?",
+                "17 - ¿Qué situaciones o solicitudes consideran que no están completamente cubiertas por los procesos actuales del CAU?",
+                "18 - ¿Han identificado casos en los que los usuarios necesiten un acompañamiento uno a uno?"
+            ]
+        },
+        {
+            "title": "Sobre las Limitaciones del CAU",
+            "questions": [
+                "19 - ¿Qué tareas consideran que consumen tiempo pero aportan poco valor al proceso de atención?",
+                "20 - ¿Cuáles son los principales obstáculos o desafíos que enfrentan en la operación diaria que podrían mejorarse con una solución de IA?",
+                "21 - ¿Existen momentos o períodos de alta demanda donde la respuesta del CAU se ve afectada?"
+            ]
+        },
+        {
+            "title": "Sobre el Valor Agregado de la IA",
+            "questions": [
+                "22 - ¿Cómo imaginan que una herramienta de IA podría aliviar la carga de trabajo actual y permitirles dedicarse a tareas de mayor valor?"
+            ]
+        },
+        {
+            "title": "Sobre Métricas y Evaluación de Desempeño",
+            "questions": [
+                "23 - ¿Qué métricas utilizan actualmente para evaluar la efectividad y calidad del servicio que ofrece el CAU?"
+            ]
+        }
+    ]
+}
