@@ -5,6 +5,7 @@ import json
 import os
 from dotenv import load_dotenv
 import pandas as pd
+import time
 
 # Cargar credenciales y configuración
 env = os.getenv('GCP_ENV', 'local')
@@ -98,3 +99,9 @@ else:
             st.write(f"**{column}:** {user_data.iloc[0][column]}")
     else:
         st.write("No se encontraron respuestas para el usuario seleccionado.")
+
+# Configurar actualización automática cada 10 segundos
+refresh_interval = 10  # Intervalo en segundos para la actualización automática
+st.write(f"La aplicación se actualizará automáticamente cada {refresh_interval} segundos para cargar nuevas respuestas.")
+time.sleep(refresh_interval)
+st.experimental_rerun()
