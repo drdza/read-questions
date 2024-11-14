@@ -78,7 +78,7 @@ except Exception as e:
 
 # Mapear cada columna de pregunta en el DataFrame al texto completo de la pregunta
 df = df.rename(columns=pregunta_map)
-st.wrike(df.columns)
+st.write(df.columns)
 
 # Mostrar datos de manera amigable
 st.title("Respuestas de la Encuesta")
