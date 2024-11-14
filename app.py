@@ -100,11 +100,3 @@ else:
             st.write(f"**{column}:** {user_data.iloc[0][column]}")
     else:
         st.write("No se encontraron respuestas para el usuario seleccionado.")
-
-# Configurar actualización automática cada 10 segundos usando query params
-refresh_interval = 10  # Intervalo en segundos para la actualización automática
-st.write(f"La aplicación se actualizará automáticamente cada {refresh_interval} segundos para cargar nuevas respuestas.")
-
-# Simular recarga automática mediante query params
-time.sleep(refresh_interval)
-st.set_query_params()
