@@ -95,7 +95,7 @@ else:
 
     # Mostrar preguntas y respuestas de ese usuario
     if not user_data.empty:
-        st.subheader(f"Respuestas de {user_name}")
+        st.subheader(f"Respuestas de {selected_user}")
         for column in user_data.columns[2:]:  # Saltar nombre y correo electrónico
             st.write(f"**{column}:** {user_data.iloc[0][column]}")
     else:
