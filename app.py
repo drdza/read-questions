@@ -84,7 +84,7 @@ st.title("Respuestas de la Encuesta")
 st.write("Esta aplicación muestra las respuestas recopiladas en la encuesta, asociadas a cada pregunta.")
 
 # Seleccionar una fila específica para ver respuestas de un usuario individual
-selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", df["Correo Electrónico"].unique())
+selected_user = st.selectbox("Selecciona un usuario para ver sus respuestas:", df["Email"].unique())
 user_data = df[df["Email"] == selected_user]
 
 # Mostrar preguntas y respuestas de ese usuario
