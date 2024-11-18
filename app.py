@@ -60,7 +60,7 @@ else:
 try:
    sheet_name = os.getenv("GCP_GOOGLE_SHEET_NAME")
    sheet = client.open(sheet_name).sheet1
-   st.write("✅ Hoja de Google abierta correctamente.")¿
+   st.write("✅ Hoja de Google abierta correctamente.")
 except Exception as e:
    st.error(f"Error al abrir la hoja de Google: {e}")
    st.stop()
