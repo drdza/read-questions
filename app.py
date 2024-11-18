@@ -40,20 +40,22 @@ if env == 'prod':
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
          "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
 
+st.write(os.getenv("GCP_GOOGLE_APPLICATION_CREDENTIALS"))
+
 if env == 'prod':
     try:
         credentials = ServiceAccountCredentials.from_json_keyfile_name("temp_credentials.json", scope)
         client = gspread.authorize(credentials)    
         os.remove("temp_credentials.json")
     except Exception as e:
-        st.error(f"Error en la autenticación: {e}")
+        st.error(f"Error en la autenticación - Prod: {e}")
         st.stop()
 else:
     try:
         credentials = service_account.Credentials.from_service_account_file(os.getenv("GCP_GOOGLE_APPLICATION_CREDENTIALS"), scopes=scope)
         client = gspread.authorize(credentials)
     except Exception as e:
-        st.error(f"Error en la autenticación: {e}")
+        st.error(f"Error en la autenticación - Local: {e}")
         st.stop()
 
 # Intentar abrir la hoja de Google
