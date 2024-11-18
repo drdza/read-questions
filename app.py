@@ -17,6 +17,7 @@ st.set_page_config(
 
 # Cargar credenciales y configuración
 env = os.getenv('GCP_ENV', 'local')
+
 if env == 'prod':
     credentials_dict = {
         "type": os.getenv("GCP_TYPE"),
