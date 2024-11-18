@@ -8,6 +8,13 @@ from dotenv import load_dotenv
 import pandas as pd
 import time
 
+st.set_page_config(
+   page_title="Análisis de Datos",
+   page_icon="🧊",
+   layout="wide",
+   initial_sidebar_state="expanded",
+)
+
 # Cargar credenciales y configuración
 env = os.getenv('GCP_ENV', 'local')
 if env == 'prod':
