@@ -18,6 +18,10 @@ st.set_page_config(
 # Cargar credenciales y configuración
 env = os.getenv('GCP_ENV', 'local')
 
+# Configuración de Google Sheets
+scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
+         "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+
 if env == 'prod':
     credentials_dict = {
         "type": os.getenv("GCP_TYPE"),
@@ -35,14 +39,7 @@ if env == 'prod':
     # Guardar credenciales temporalmente para la autenticación
     with open("temp_credentials.json", "w") as f:
         json.dump(credentials_dict, f)
-        
-# Configuración de Google Sheets
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
-         "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
-
-st.write(os.getenv("GCP_GOOGLE_APPLICATION_CREDENTIALS"))
-
-if env == 'prod':
+       
     try:
         credentials = ServiceAccountCredentials.from_json_keyfile_name("temp_credentials.json", scope)
         client = gspread.authorize(credentials)    
@@ -51,7 +48,8 @@ if env == 'prod':
         st.error(f"Error en la autenticación - Prod: {e}")
         st.stop()
 else:
-    try:
+   try:      
+        st.write(os.getenv("GCP_GOOGLE_APPLICATION_CREDENTIALS"))     
         credentials = service_account.Credentials.from_service_account_file(os.getenv("GCP_GOOGLE_APPLICATION_CREDENTIALS"), scopes=scope)
         client = gspread.authorize(credentials)
     except Exception as e:
