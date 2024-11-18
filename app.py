@@ -79,7 +79,7 @@ question_num = 1
 for section in survey_data["sections"]:
    for question in section["questions"]:
       pregunta_map[f"Pregunta {question_num}"] = question
-         question_num += 1
+      question_num += 1
 
 # Leer todas las respuestas de Google Sheets y crear un DataFrame
 try:
