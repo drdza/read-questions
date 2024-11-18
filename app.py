@@ -108,7 +108,7 @@ else:
    # Mostrar preguntas y respuestas de ese usuario
    if not user_data.empty:
       st.subheader(f"Respuestas de {selected_user}")
-         for column in user_data.columns:  # Saltar nombre y correo electrónico
-            st.write(f"**{column}:** {user_data.iloc[0][column]}")
+      for column in user_data.columns:  # Saltar nombre y correo electrónico
+         st.write(f"**{column}:** {user_data.iloc[0][column]}")
    else:
       st.write("No se encontraron respuestas para el usuario seleccionado.")
